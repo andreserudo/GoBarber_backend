@@ -18,7 +18,7 @@ class SendForgotPasswordEmailService {
   constructor(
     @inject('UsersRepository') private usersRepository: IUsersRepository,
 
-    @inject('MailProvider') private mamilProvider: IMailProvider,
+    @inject('MailProvider') private emailProvider: IMailProvider,
 
     @inject('UserTokensRepository')
     private userTokensRepository: IUserTokentRepository,
@@ -40,7 +40,7 @@ class SendForgotPasswordEmailService {
       'forgot_password.hbs',
     );
 
-    await this.mamilProvider.sendMail({
+    await this.emailProvider.sendMail({
       to: { name: user.name, email: user.email },
       subject: '[GoBarber] Recuperação de senha',
       templateData: {

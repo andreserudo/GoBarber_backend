@@ -14,7 +14,7 @@ export default {
 
   defaults: {
     from: {
-      email: 'teste@teste.com',
+      email: 'testeemail@teste.com',
       name: 'Teste',
     },
   },
