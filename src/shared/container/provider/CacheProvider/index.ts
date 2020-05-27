@@ -8,4 +8,4 @@ const providers = {
   redis: RedisCacheProvider,
 };
 
-container.registerSingleton<ICacheProvider>('ICacheProvider', providers.redis);
+container.registerSingleton<ICacheProvider>('CacheProvider', providers.redis);
